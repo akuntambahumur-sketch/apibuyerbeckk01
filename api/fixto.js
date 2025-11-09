@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: GMAIL_USER, // Ini akan otomatis memakai 'beckkbanding@gmail.com' (dari Vercel)
+      user: GMAIL_USER, // Ini akan otomatis memakai 'emailmu@gmail.com' (dari Vercel)
       pass: GMAIL_PASS, // Ini adalah Sandi Aplikasi 16 digit (dari Vercel)
     },
   });
@@ -62,7 +62,7 @@ Danke.
     // Kirim balasan SUKSES (JSON) ke bot Anda
     return res.status(200).json({
       success: true,
-      message: `Email banding (Jerman) untuk nomor ${nomor} berhasil dikirim.`,
+      message: `Email banding untuk nomor ${nomor} berhasil dikirim.`,
       nomor: nomor,
       response: info.response,
     });
